@@ -4,7 +4,7 @@ import { Appbar } from "react-native-paper";
 import tailwind from "twrnc";
 
 // application's heading
-const _header = () => {
+const StopwatchHeader = () => {
   return (
     <Appbar.Header style={tailwind`bg-black `}>
       <Appbar.Content title="My Stopwatch" style={tailwind`items-center`} />
@@ -12,4 +12,4 @@ const _header = () => {
   );
 };
 
-export default _header;
+export default StopwatchHeader;

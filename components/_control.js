@@ -4,7 +4,7 @@ import tailwind from "twrnc";
 
 // for control buttons
 
-const _control = ({
+const Control = ({
   isRunning,
   handleLeftButtonPress,
   handleRightButtonPress,
@@ -14,14 +14,15 @@ const _control = ({
       {/* controlButtonBorder - left */}
       <TouchableOpacity
         style={[
-          tailwind`justify-center items-center w-20 h-20 rounded-3xl`,
+          tailwind`justify-center items-center w-20 h-20 rounded-full`,
           { backgroundColor: isRunning ? "#333333" : "#1c1c1e" },
         ]}
         onPress={handleLeftButtonPress}
+        activeOpacity={70}
       >
         {/* controlButton */}
         <View
-          style={tailwind`justify-center items-center w-19 h-19 rounded-3xl border border-black`}
+          style={tailwind`justify-center items-center w-19 h-19 rounded-full border border-black`}
         >
           <Text style={{ color: isRunning ? "#ffffff" : "#9d9ca2" }}>
             {isRunning ? "Lap" : "Reset"}
@@ -32,14 +33,14 @@ const _control = ({
       {/* controlButtonBorder - right */}
       <TouchableOpacity
         style={[
-          tailwind`justify-center items-center w-20 h-20 rounded-3xl`,
+          tailwind`justify-center items-center w-20 h-20 rounded-full`,
           { backgroundColor: isRunning ? "#340e0d" : "#0a2a12" },
         ]}
         onPress={handleRightButtonPress}
       >
         {/* controlButton */}
         <View
-          style={tailwind`justify-center items-center w-19 h-19 rounded-3xl border border-black`}
+          style={tailwind`justify-center items-center w-19 h-19 rounded-full border border-black`}
         >
           <Text style={{ color: isRunning ? "#ea4c49" : "#37d05c" }}>
             {isRunning ? "Stop" : "Start"}
@@ -50,4 +51,4 @@ const _control = ({
   );
 };
 
-export default React.memo(_control); // only renders changes on the screens - boosts performance
+export default React.memo(Control); // only renders changes on the screens - boosts performance
