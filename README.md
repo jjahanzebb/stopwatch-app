@@ -1,2 +1,2 @@
 # stopwatch-app
-Stopwatch app build using React Native
+Stopwatch app build using React Native (EXPO)
