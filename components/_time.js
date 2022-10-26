@@ -1,9 +1,4 @@
-const checkDoubleDigits = (number) =>
-  number < 9
-    ? `0${number}`
-    : number > 99
-    ? number.toString().slice(-2)
-    : number;
+const checkDoubleDigits = (number) => (number <= 9 ? `0${number}` : number);
 
 export const displayTime = (centiseconds) => {
   let minutes = 0;
@@ -17,17 +12,19 @@ export const displayTime = (centiseconds) => {
     return `00:00:${checkDoubleDigits(centiseconds)}`;
   }
 
-  seconds = (centiseconds - (centiseconds % 100)) / 100;
+  let centisecondsRemainder = centiseconds % 100;
+  seconds = (centiseconds - centisecondsRemainder) / 100;
 
   if (seconds < 60) {
     return `00:${checkDoubleDigits(seconds)}:${checkDoubleDigits(
-      centiseconds
+      centisecondsRemainder
     )}`;
   }
 
-  minutes = (seconds - (seconds % 60)) / 60;
+  let secondsRemainder = seconds % 60;
+  minutes = (seconds - secondsRemainder) / 60;
 
   return `${checkDoubleDigits(minutes)}:${checkDoubleDigits(
-    seconds
-  )}:${checkDoubleDigits(centiseconds)}`;
+    secondsRemainder
+  )}:${checkDoubleDigits(centisecondsRemainder)}`;
 };

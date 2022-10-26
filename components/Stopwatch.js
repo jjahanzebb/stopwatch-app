@@ -53,12 +53,7 @@ const Stopwatch = () => {
       {/* display */}
       <View style={[tailwind`justify-center items-center`, { flex: 3 / 5 }]}>
         {/* displayText */}
-        <Text
-          style={[
-            tailwind`text-white text-7xl	font-extralight`,
-            { fontFamily: Platform.OS === "ios" ? "Helvetica Neue" : null },
-          ]}
-        >
+        <Text style={[tailwind`text-white text-7xl font-extralight`, {}]}>
           {displayTime(time)}
         </Text>
       </View>

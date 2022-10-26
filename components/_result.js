@@ -10,7 +10,7 @@ const Result = ({ results }) => {
   return (
     <ScrollView>
       {/* resultItem */}
-      {/* <View
+      <View
         style={[
           tailwind`flex-row justify-between items-center border-b h-12 px-4`,
           { borderColor: "#313131" },
@@ -25,11 +25,10 @@ const Result = ({ results }) => {
           ]}
         >
           {/* resultItemText */}
-      {/* <Text style={tailwind`text-white`}>Lap {results.length - index}</Text> */}
-
-      {/* <Text style={tailwind`text-white`}>{displayTime(item)}</Text> */}
-      {/* </View> */}
-      {/* ))} */}
+          <Text style={tailwind`text-white`}>Lap {results.length - index}</Text>
+          <Text style={tailwind`text-white`}>{displayTime(item)}</Text>
+        </View>
+      ))}
     </ScrollView>
   );
 };

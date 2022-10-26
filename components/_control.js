@@ -18,7 +18,7 @@ const Control = ({
           { backgroundColor: isRunning ? "#333333" : "#1c1c1e" },
         ]}
         onPress={handleLeftButtonPress}
-        activeOpacity={70}
+        activeOpacity={0.65}
       >
         {/* controlButton */}
         <View
@@ -37,6 +37,7 @@ const Control = ({
           { backgroundColor: isRunning ? "#340e0d" : "#0a2a12" },
         ]}
         onPress={handleRightButtonPress}
+        activeOpacity={0.65}
       >
         {/* controlButton */}
         <View
